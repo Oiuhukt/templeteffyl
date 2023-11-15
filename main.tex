@@ -1,0 +1,52 @@
+\documentclass[12pt, twoside, openright]{book}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[letterpaper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{setspace}\onehalfspace
+%\setstretch{1.5}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage[spanish]{babel}
+\usepackage[textsize=tiny, colorinlistoftodos]{todonotes}
+\usepackage[%
+backend=biber,
+natbib=true,
+style=apa,
+]{biblatex}
+%\usepackage{apacite}
+%\usepackage{fullpage}
+\usepackage[Sonny]{fncychap}
+
+%\newcommand{\quentin}[2][]
+%{\todo[author=Quentin, color=green!40, #1]{#2}}
+
+\title{Templete seminario de tesis}
+\author{Abraham Olivetti}
+\date{Octubre 2023}
+
+
+\addbibresource{biblio.bib}
+
+\begin{document}
+
+\clearpage{\pagestyle{empty}\cleardoublepage} %Para agregar una página en blanco después de las secciones.
+\maketitle
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\tableofcontents
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+%Aquí los capítulos%
+\include{./Capítulos/intro}
+\clearpage{\pagestyle{empty}\cleardoublepage} %Esto elimina los números de las páginas en blanco
+\pagestyle{headings}%esto reinserta los números de las páginas y los encabezados
+\include{./Capítulos/Capítulo 1/cap1}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\pagestyle{headings}
+\include{./Capítulos/Capítulo 2/cap2}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%bibliografía
+\printbibliography
+
+\end{document}
